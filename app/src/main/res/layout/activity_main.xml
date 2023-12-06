@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:maxWidth="320dp"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/tvTituloLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="37sp"
+        android:text="@string/tvTituloLogin"
+        android:textColor="@color/negro"
+        android:layout_marginVertical="30dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/Hints"
+            android:ems="10"
+            android:hint="@string/etUsuario"
+            android:inputType="text"
+            android:maxWidth="320dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/etContraseña"
+            android:inputType="text"
+            android:textColorHint="@color/Hints"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnIniciarSesion"
+        android:layout_gravity="center"
+        android:minWidth="200dp"
+        android:backgroundTint="@color/azulOscuro"
+        android:layout_marginVertical="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/tvOlvidarContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvNoCuenta"
+            android:textSize="15sp"
+
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnCrearCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCrearCuenta"
+            android:backgroundTint="@color/azulOscuro"
+            android:maxWidth="100dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

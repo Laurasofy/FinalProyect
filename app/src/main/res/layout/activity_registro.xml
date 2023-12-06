@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Registro">
+
+    <Button
+        android:id="@+id/btnRegresoMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/azulOscuro"
+        android:width="10dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btnRegresoMain" />
+
+    <TextView
+        android:id="@+id/tvTituloRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textColor="@color/negro"
+        android:layout_marginVertical="10dp"
+        android:text="@string/tvTituloRegistro" />
+
+    <EditText
+        android:id="@+id/etUsuarioRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etUsuario"
+        android:layout_marginVertical="10dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/Hints"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etContraseñaRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etContraseña"
+        android:layout_marginVertical="10dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/Hints"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etConfirmarContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/etConfirmarContraseña"
+        android:layout_marginVertical="10dp"
+        android:minHeight="48dp"
+        android:textColorHint="@color/Hints"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:backgroundTint="@color/azulOscuro"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="@string/btnCrearCuenta"/>
+</LinearLayout>

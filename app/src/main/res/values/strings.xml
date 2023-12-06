@@ -1,0 +1,17 @@
+<resources>
+    <!--Main-->
+    <string name="app_name">Proyectofinal</string>
+    <string name="tvTituloLogin">Bienvenido</string>
+    <string name="etUsuario">Ingrese su usuario</string>
+    <string name="etContraseña">Ingrese su contraseña</string>
+    <string name="btnIniciarSesion">Iniciar Sesion</string>
+    <string name="tvOlvidarContraseña">¿Has olvidado la contraseña?</string>
+    <string name="tvNoCuenta">¿No tienes una cuenta?</string>
+    <string name="btnCrearCuenta">Crear</string>
+
+    <!--Registro-->
+    <string name="tvTituloRegistro">Registrate</string>
+    <string name="etConfirmarContraseña">Confirmar contraseña</string>
+    <string name="btnRegresoMain">Volver</string>
+
+</resources>
