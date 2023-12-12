@@ -8,4 +8,9 @@
     <color name="amarillo">#FFCB05</color>
     <color name="Rojo">#F23C50</color>
     <color name="Hints">#747474</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#D7D7D9</color>
+    <color name="orange">#FEA900</color>
+    <color name="red">#E76160</color>
 </resources>
