@@ -14,4 +14,47 @@
     <string name="etConfirmarContraseña">Confirmar contraseña</string>
     <string name="btnRegresoMain">Volver</string>
 
+    <!--Menu/Cart-->
+    <string name="tvBienvenido">Bienvenido</string>
+    <string name="tvNombre">Alex Lopez</string>
+    <string name="etBuscar">Buscar en ProPlayer Electronics</string>
+    <string name="tvDescuento">  Descuento del 20% en \n teclados gamers</string>
+    <string name="tvComprar">Comprar</string>
+    <string name="tvExplorar">Explore las categorias</string>
+    <string name="tvPc">Pc</string>
+    <string name="tvConsola">Consolas</string>
+    <string name="tvOtrosProductos">Ver todo</string>
+    <string name="tvAudifonos">Audifonos</string>
+    <string name="tvAccesorios">Accesorios</string>
+    <string name="tvProductos">Algunos productos</string>
+    <string name="tvTodo">Ver todo</string>
+    <string name="tvExplo">Explorar</string>
+    <string name="tvCarro">Carrito de compras</string>
+    <string name="textView2">Resumen del pedido</string>
+    <string name="tvTotal">Total</string>
+    <string name="tvEntrega">Entrega</string>
+    <string name="tvImpuestos">Total de impuestos</string>
+    <string name="tvImpuestos1">$-</string>
+    <string name="tvEntrega1">$-</string>
+    <string name="tvTotalImpuestos2">$-</string>
+    <string name="tvTotal1">Total</string>
+    <string name="tvPr">-$</string>
+    <string name="tvInformación">Información</string>
+    <string name="tvDireccion">Direccion de entrega</string>
+    <string name="tvDireccion1">Direccion de entrega</string>
+    <string name="tvPago">Metodos de pago</string>
+    <string name="tvDinero">Dinero</string>
+    <string name="btnContinuarC">Continuar compra</string>
+
+    <!--Profile-->
+    <string name="tvProfile">Mi perfil</string>
+    <string name="tvNombreP">Nombre:</string>
+    <string name="tvApellido">Apellido:</string>
+    <string name="tvCorreo">Correo:</string>
+    <string name="tvContraseña">Contraseña:</string>
+    <string name="tvDireccionP">Direccion:</string>
+    <string name="tvTelefono">Telefono:</string>
+    <string name="btnActualizar">Actualizar</string>
+
+
 </resources>

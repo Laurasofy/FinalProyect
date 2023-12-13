@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
         begin();
         this.btnCrearCuenta.setOnClickListener(this::screenRegistro);
         this.btnIniciarSesion.setOnClickListener(this::processLogin);
+
     }
+
     private void screenRegistro(View view){//Cambiar de vista a Registro
         Intent irRegistro = new Intent(getApplicationContext(), Registro.class);
         startActivity(irRegistro);
