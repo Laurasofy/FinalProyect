@@ -62,7 +62,7 @@
         android:text="@string/btnIniciarSesion"
         android:layout_gravity="center"
         android:minWidth="200dp"
-        android:backgroundTint="@color/azulOscuro"
+        android:backgroundTint="@color/red"
         android:layout_marginVertical="20dp"
         />
 
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnCrearCuenta"
-            android:backgroundTint="@color/azulOscuro"
+            android:backgroundTint="@color/red"
             android:maxWidth="100dp"
             />
     </LinearLayout>

@@ -45,4 +45,16 @@
     <string name="tvPago">Metodos de pago</string>
     <string name="tvDinero">Dinero</string>
     <string name="btnContinuarC">Continuar compra</string>
+
+    <!--Profile-->
+    <string name="tvProfile">Mi perfil</string>
+    <string name="tvNombreP">Nombre:</string>
+    <string name="tvApellido">Apellido:</string>
+    <string name="tvCorreo">Correo:</string>
+    <string name="tvContraseña">Contraseña:</string>
+    <string name="tvDireccionP">Direccion:</string>
+    <string name="tvTelefono">Telefono:</string>
+    <string name="btnActualizar">Actualizar</string>
+
+
 </resources>

@@ -1,5 +1,7 @@
 package com.edu.proyectofinal;
 
+import static com.edu.proyectofinal.api.ValuesApi.BASE_URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,21 +14,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edu.proyectofinal.api.ServiceLogin;
+import com.edu.proyectofinal.model.Loger;
+import com.edu.proyectofinal.model.Register;
+import com.edu.proyectofinal.model.ResponseCredentials;
+import com.edu.proyectofinal.remote.ClienteRetrofit;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class Registro extends AppCompatActivity {
 
     private Button btnRegresoMain;
     private Button btnRegistrar;
-    private TextView tvTituloRegistro;
     private EditText etUsuarioRegistro;
     private EditText etContraseñaRegistro;
     private EditText etConfirmarContraseña;
 
     private String usuario;
-    private String contraseña;
-    private String confirmarContraseña;
-
-
-
+    private String contrasena;
+    private String confirmarContrasena;
 
 
     @Override
@@ -35,7 +44,29 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
         begin();
         this.btnRegresoMain.setOnClickListener(this::screenMain);
-        this.btnRegistrar.setOnClickListener(this::confirmPassword);
+        this.btnRegistrar.setOnClickListener(this::registrarUsuario);
+
+    }
+
+    private void registrarUsuario(View view) {
+        Register registro = new Register();
+        registro.setUse_mail(usuario);
+        registro.setUse_contras(contrasena);
+        Retrofit retrofit = ClienteRetrofit.getClient(BASE_URL);
+        ServiceLogin servicesLogin = retrofit.create(ServiceLogin.class);
+        Call<String> call = servicesLogin.registrousuario(registro);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                String mensaje = response.body();
+                Toast.makeText(Registro.this, ""+mensaje, Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(Registro.this, "Error" + t, Toast.LENGTH_SHORT).show();
+                Log.e("MiEtiqueta", String.valueOf(t));
+            }
+        });
 
     }
 
@@ -46,8 +77,8 @@ public class Registro extends AppCompatActivity {
 
     private void data(){  //Asignamos valores a usuario,contraseña y confirmarcontrasñea
         this.usuario = etUsuarioRegistro.getText().toString();
-        this.contraseña = etContraseñaRegistro.getText().toString();
-        this.confirmarContraseña = etConfirmarContraseña.getText().toString();
+        this.contrasena = etContraseñaRegistro.getText().toString();
+        this.confirmarContrasena = etConfirmarContraseña.getText().toString();
     }
 
     private boolean validationData(){   //Validacion con expresiones regulares de los datos (usuario, contraseña y confirmarcontraseña)
@@ -60,7 +91,7 @@ public class Registro extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "u:"+usuario, Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(!contraseña.matches(regexContraseña)){
+        if(!contrasena.matches(regexContraseña)){
             etContraseñaRegistro.setError("Contraseña no valida");
             return false;
         }
@@ -69,7 +100,7 @@ public class Registro extends AppCompatActivity {
     private void confirmPassword(View view){     //Validamos que las contraseñas sean iguales y guardamos el usuario
         data();
         if (validationData()) {
-            if (contraseña.equals(confirmarContraseña)) {
+            if (contrasena.equals(confirmarContrasena)) {
                 userSave();
             } else {
                 //Si las contraseñas no coinciden, muestra un mensaje al usuario para informarle de esto.
@@ -84,12 +115,11 @@ public class Registro extends AppCompatActivity {
     private void begin(){   //Conectamos nuestro objeto en java con el xml
         this.btnRegresoMain = findViewById(R.id.btnRegresoMain);
         this.btnRegistrar = findViewById(R.id.btnRegistrar);
-        this.tvTituloRegistro = findViewById(R.id.tvTituloRegistro);
         this.etUsuarioRegistro = findViewById(R.id.etUsuarioRegistro);
         this.etContraseñaRegistro = findViewById(R.id.etContraseñaRegistro);
         this.etConfirmarContraseña = findViewById(R.id.etConfirmarContraseña);
-        this.usuario = "";
-        this.contraseña = "";
-        this.confirmarContraseña = "";
+        this.usuario = etUsuarioRegistro.getText().toString();
+        this.contrasena = etContraseñaRegistro.getText().toString();
+        this.confirmarContrasena = "";
     }
 }
